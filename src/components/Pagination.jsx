@@ -88,7 +88,7 @@ export default function Pagination(props) {
                               key={item + i}
                               onClick={() => setRowsPerPage(item)}
                               className={classNames(
-                                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                active ? 'bg-gray-100 bg-gray-dark w-full' : 'w-full text-gray',
                                 'block px-4 py-2 text-sm'
                               )}
                             >
