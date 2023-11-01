@@ -82,10 +82,9 @@ export default function Pagination(props) {
                   <div className="py-1">
                     {
                       [5, 10, 25].map((item, i) => (
-                        <Menu.Item>
+                        <Menu.Item  key={item + i}>
                           {({ active }) => (
                             <button
-                              key={item + i}
                               onClick={() => setRowsPerPage(item)}
                               className={classNames(
                                 active ? 'bg-gray-100 bg-gray-dark w-full' : 'w-full text-gray',

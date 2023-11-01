@@ -4,13 +4,13 @@ let prevCountryId = null;
 
 
 export default function WorldMap(props) {
-  const { width, data } = props;
+  const { data, width } = props;
   const [count, setCount] = React.useState(1);
   const [mapPosition, setMapPosition] = React.useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = React.useState(false);
   const [dragStart, setDragStart] = React.useState({ x: 0, y: 0 });
   const refInfo = useRef();
-
+console.log(data);
   const countryData = data.filter(item => item.countryRegionTypeId === 'c').map(item => ({
     id: item.countryRegionId,
     activity: item.activityName,

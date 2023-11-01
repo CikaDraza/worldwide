@@ -132,12 +132,12 @@ export default function Chart(props) {
       id === 'wti' ?
       <>
         <path d={`M0 ${dataPointsWti[3].value} L${divisionPoints[0]} ${dataPointsWti[2].value} L${divisionPoints[1]} ${dataPointsWti[1].value} L${divisionPoints[2]} ${dataPointsWti[0].value} 1 999999H`} fill="url(#paint0_linear_5_21)"/>
-        <path d={`M0 ${dataPointsWti[3].value} L${divisionPoints[0]} ${dataPointsWti[2].value} L${divisionPoints[1]} ${dataPointsWti[1].value} L${divisionPoints[2]} ${dataPointsWti[0].value}`}  stroke="#66C7DC" stroke-width="2"/>
+        <path d={`M0 ${dataPointsWti[3].value} L${divisionPoints[0]} ${dataPointsWti[2].value} L${divisionPoints[1]} ${dataPointsWti[1].value} L${divisionPoints[2]} ${dataPointsWti[0].value}`}  stroke="#66C7DC" strokeWidth="2"/>
       </>
       :
       <>
         <path d={`M0 ${dataPointsBrent[3].value} L${divisionPoints[0]} ${dataPointsBrent[2].value} L${divisionPoints[1]} ${dataPointsBrent[1].value} L${divisionPoints[2]} ${dataPointsBrent[0].value} 1 999999H`} fill="url(#paint0_linear_5_21)"/>
-        <path d={`M0 ${dataPointsBrent[3].value} L${divisionPoints[0]} ${dataPointsBrent[2].value} L${divisionPoints[1]} ${dataPointsBrent[1].value} L${divisionPoints[2]} ${dataPointsBrent[0].value}`}  stroke="#66C7DC" stroke-width="2"/>
+        <path d={`M0 ${dataPointsBrent[3].value} L${divisionPoints[0]} ${dataPointsBrent[2].value} L${divisionPoints[1]} ${dataPointsBrent[1].value} L${divisionPoints[2]} ${dataPointsBrent[0].value}`}  stroke="#66C7DC" strokeWidth="2"/>
       </>
     }
     <defs>
