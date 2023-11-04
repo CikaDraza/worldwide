@@ -71,7 +71,7 @@ function stableSort(array, comparator) {
 }
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme'));
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark');
   const [loading, setLoadin] = useState(true);
   const [dataProductions, setDataProductions] = useState([]);
   const [dataConsumptions, setDataConsumptions] = useState([]);
@@ -238,8 +238,9 @@ const lastWorldConsumption = lastYearWorldConsumption?.slice(0, 1);
     }
   }, [theme])
   
-  function handleThemeMode() {
-    setTheme(theme !== 'dark' ? 'dark' : 'light')
+  function handleThemeMode(color) {
+    setTheme(color.name === 'Black' ? 'dark' : 'light')
+    localStorage.setItem('theme', color.name === 'Black' ? 'dark' : 'light')
   }
 
   return (
@@ -337,7 +338,18 @@ const lastWorldConsumption = lastYearWorldConsumption?.slice(0, 1);
                     pages?.map((item, index) => (
                       <div key={item.name} className='flex items-center justify-start'>
                         <a href="#" className={`${active == index && 'border-b border-neon-green border-b-4 pb-1'}`}>
-                          {item.icon}
+                          {
+                            item.name === 'Oil' && <OilIcon theme={theme} />
+                          }
+                          {
+                            item.name === 'Nuclear' && <NuklearIcon theme={theme} />
+                          }
+                          {
+                            item.name === 'Electricity' && <ElectricityIcon theme={theme} />
+                          }
+                          {
+                            item.name === 'Green Energy' && <GreenEnergyIcon theme={theme} />
+                          }
                         </a>
                         <div className={`flex-auto ml-1 min-w-full h-1 bg-white ${pages.length - 1 === index && 'hidden'}`}></div>
                       </div>

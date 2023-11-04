@@ -86,7 +86,7 @@ export default function Header(props) {
                             <div className="flex items-center justify-center space-x-3">
                               {colorMode.colors.map((color) => (
                                 <RadioGroup.Option
-                                  onClick={() => handleThemeMode()}
+                                  onClick={() => handleThemeMode(color)}
                                   key={color.name}
                                   value={color}
                                   className={({ active, checked }) =>
