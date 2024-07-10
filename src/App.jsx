@@ -213,7 +213,7 @@ const lastWorldConsumption = lastYearWorldConsumption?.slice(0, 1);
       const wtiResponse = await axios.get(WTI_DAILY);
       const brentResponse = await axios.get(BRENT_DAILY);
       const worldProductionConsumptionResponse = await axios.get(WORLD_OIL_PRODUCTION_CONSUPTION)
-  
+  console.log(consumptionResponse);
       setDataConsumptions(consumptionResponse.data.response.data.filter(item => item.countryRegionTypeId === 'c'));
       setDataProductions(productionResponse.data.response.data.filter(item => item.countryRegionTypeId === 'c'));
       setWorldProduction(worldProductionConsumptionResponse.data.response.data.filter(item => item.activityName === 'Production'))
