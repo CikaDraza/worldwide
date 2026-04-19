@@ -463,7 +463,7 @@ export default function WorldMapVectorMap(props) {
         style={{
           width: "100%",
           height: "100%",
-          background: darkTheme ? "#1a1a1a" : "#f8f9fa",
+          background: "#1a1a1a",
         }}
       >
         {/* INFO BOX */}
@@ -2485,27 +2485,17 @@ export default function WorldMapVectorMap(props) {
 
         {/* ZOOM DUGMIĆI */}
         <div
-          className={`absolute bottom-4 left-4 flex rounded-2xl overflow-hidden border z-10 ${
-            darkTheme
-              ? "bg-gray-900 border-gray-700"
-              : "bg-white border-gray-300"
-          }`}
+          className={`absolute bottom-6 left-4 flex rounded-2xl overflow-hidden border z-10 bg-gray-950 border-gray-800`}
         >
           <button
             onClick={handleZoomIn}
-            className={`px-5 py-2.5 text-xl font-light hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors ${
-              darkTheme ? "text-white hover:text-black" : "text-gray-900"
-            }`}
+            className={`px-5 py-0.75 text-xl font-light hover:bg-gray-100 transition-colors text-white hover:text-black`}
           >
             +
           </button>
           <button
             onClick={handleZoomOut}
-            className={`px-5 py-2.5 text-xl font-light hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border-l ${
-              darkTheme
-                ? "border-gray-700 text-white hover:text-black"
-                : "border-gray-300 text-gray-900"
-            }`}
+            className={`px-5 py-0.75 text-xl font-light hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors border-l border-gray-700 text-white hover:text-black`}
           >
             −
           </button>

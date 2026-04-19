@@ -69,7 +69,7 @@ export default function EnergyPanel() {
 
       <div className="hidden md:flex flex-1 overflow-hidden">
         {/* ── LEFT PANEL ─────────────────────────────────── */}
-        <div className="w-84 border-r border-[#222] flex flex-col gap-5 p-5 overflow-y-auto flex-shrink-0">
+        <div className="w-96 border-r border-[#222] flex flex-col gap-5 p-5 overflow-y-auto flex-shrink-0">
           {/* Central circle */}
           <div className="flex flex-col items-center pt-4 pb-6">
             <CentralCircle
@@ -232,7 +232,10 @@ export default function EnergyPanel() {
       {/* ── MOBILE LAYOUT ─────────────────────────────────── */}
       <div className="flex md:hidden flex-col flex-1 overflow-hidden">
         {/* Two mini trend charts side by side */}
-        <div className="flex border-b border-[#222]" style={{ flex: "0 0 40%" }}>
+        <div
+          className="flex border-b border-[#222]"
+          style={{ flex: "0 0 40%" }}
+        >
           <div className="flex-1 flex flex-col border-r border-[#222] p-2 overflow-hidden">
             <span className="text-[9px] font-semibold text-gray-500 uppercase tracking-wider mb-1">
               Production
