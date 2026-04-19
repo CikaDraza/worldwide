@@ -39,3 +39,12 @@ html, body, #root {
   padding: 8px 12px !important;
   font-size: 12px !important;
 }
+
+.country-glow {
+  filter: drop-shadow(0 0 6px currentColor);
+  transition: filter 0.2s ease;
+}
+
+.country-glow:hover {
+  filter: drop-shadow(0 0 12px currentColor);
+}
